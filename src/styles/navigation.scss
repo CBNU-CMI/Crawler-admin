@@ -1,0 +1,17 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 10rem;
+
+  .notice,
+  .restaurant {
+    background-color: #f4f5f7;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    text-align: center;
+    cursor: pointer;
+  }
+}
