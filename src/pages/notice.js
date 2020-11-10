@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../component/Header";
+import Navigation from "../component/Navigation";
 
 const Notice = () => {
   return (
     <div>
-      <Header />
+      <Navigation />
       <h2>공지</h2>
     </div>
   );

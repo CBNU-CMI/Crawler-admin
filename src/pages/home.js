@@ -1,19 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Navigation from "../component/Navigation";
 
 const Home = () => {
   return (
-    <div>
-      <div className="notice">
-        <Link className="text-link" to="/notice">
-          공지
-        </Link>
-      </div>
-      <div className="restaurant">
-        <Link className="text-link" to="/restaurant">
-          식당
-        </Link>
-      </div>
+    <div className="home">
+      <Navigation />
     </div>
   );
 };
