@@ -1,11 +1,9 @@
 import React from "react";
-import Navigation from "../component/Navigation";
 import {} from "../styles/home.scss";
 
 const Home = () => {
   return (
     <div className="home">
-      <Navigation />
       <div className="opensource">
         <h3>개발자이신가요?</h3>
         <p>
