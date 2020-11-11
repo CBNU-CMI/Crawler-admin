@@ -1,9 +1,36 @@
 import React from "react";
 import {} from "../styles/home.scss";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Home = () => {
   return (
     <div className="home">
+      <div className="crawler-list">
+        <div className="crawler">
+          <p>
+            경영정보학과
+            <MdKeyboardArrowRight style={{ color: "gray" }} />
+          </p>
+        </div>
+        <div className="crawler">
+          <p>
+            경영정보학과
+            <MdKeyboardArrowRight style={{ color: "gray" }} />
+          </p>
+        </div>
+        <div className="crawler">
+          <p>
+            경영정보학과
+            <MdKeyboardArrowRight style={{ color: "gray" }} />
+          </p>
+        </div>
+        <div className="crawler">
+          <p>
+            경영정보학과
+            <MdKeyboardArrowRight style={{ color: "gray" }} />
+          </p>
+        </div>
+      </div>
       <div className="opensource">
         <h3>개발자이신가요?</h3>
         <p>

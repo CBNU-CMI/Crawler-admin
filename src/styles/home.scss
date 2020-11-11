@@ -1,6 +1,44 @@
+.home {
+  width: 70%;
+  margin: 0 auto;
+}
+.crawler-list {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .crawler {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    width: 20%;
+    margin: {
+      top: 1rem;
+      bottom: 1rem;
+      left: 2rem;
+      right: 2rem;
+    }
+    min-height: 5.5rem;
+    font-size: 1.25rem;
+    border: 1px solid #f0f2f3;
+    border-radius: 0.7rem;
+    color: #8a8a8a;
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #222;
+      margin-top: 2rem;
+      text-align: center;
+    }
+  }
+  :hover {
+    background-color: #f0f2f3;
+    cursor: pointer;
+  }
+}
+
 .opensource {
   margin: auto;
-  margin-top: 18rem;
+  margin-top: 3rem;
   width: 35rem;
   font-size: 1.25rem;
   color: #8a8a8a;
