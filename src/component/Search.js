@@ -9,6 +9,7 @@ const Search = () => {
     if (event.key === "Enter") {
       setSearchState({ search: true });
       setTermState({ term: event.target.value });
+      //api호출하고 결과 받아오는 부분
     }
   }
 
@@ -22,7 +23,7 @@ const Search = () => {
       />
       {searchState.search ? (
         <Redirect
-          to={{ pathname: "/result", state: { results: termState.term } }}
+          to={{ pathname: "/result", state: { term: termState.term } }}
         />
       ) : (
         ""
