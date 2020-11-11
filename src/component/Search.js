@@ -4,7 +4,7 @@ import {} from "../styles/search.scss";
 const Search = () => {
   return (
     <Fragment>
-      <input type="text" className="search" placeholder="🔍 Search Icons" />
+      <input type="text" className="search" placeholder="🔍 Search Crawler" />
     </Fragment>
   );
 };
