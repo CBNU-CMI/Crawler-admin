@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navigation from "../component/Navigation";
 import {} from "../styles/restaurant.scss";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import ErrorModal from "../component/ErrorModal";
@@ -14,7 +13,6 @@ const Restaurant = () => {
   }
   return (
     <div className="restaurant">
-      <Navigation />
       <div className="error">
         <p>에러났어요 🥺</p>
         <div className="error-crawler" onClick={openModal}>
