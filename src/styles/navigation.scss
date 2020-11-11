@@ -1,15 +1,12 @@
 .navigation {
   display: flex;
-  margin: 0 auto;
-  width: 20rem;
 
   .notice,
   .restaurant {
     font-size: 1.2rem;
-
     background-color: #f4f5f7;
     margin: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 0.7rem;
     text-align: center;
     cursor: pointer;
