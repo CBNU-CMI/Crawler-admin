@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {} from "../styles/navigation.scss";
 import { GiHotMeal } from "react-icons/gi";
 import { CgNotes } from "react-icons/cg";
+import Search from "../component/Search";
 
 const Navigation = () => {
   return (
@@ -19,6 +20,7 @@ const Navigation = () => {
           식당
         </Link>
       </div>
+      <Search />
     </div>
   );
 };
