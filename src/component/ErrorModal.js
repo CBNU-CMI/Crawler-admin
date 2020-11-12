@@ -1,7 +1,19 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import {} from "../styles/errorModal.scss";
+const axios = require("axios");
 
-const ErrorModal = ({ errorData, errorLog, close }) => {
+const ErrorModal = ({ type, errorData, close }) => {
+  const [errorLogState, setErrorLogState] = useState();
+
+  useEffect(() => {
+    axios
+      .get(`http://172.30.7.171:3000/error/log?restaurant_name=${type}`)
+      .then((res) => {
+        const errorLog = res.data;
+        setErrorLogState(errorLog);
+      });
+  }, []);
+  
   return (
     <Fragment>
       <div className="modal-overlay" onClick={close} />
@@ -17,10 +29,10 @@ const ErrorModal = ({ errorData, errorLog, close }) => {
           ""
         )}
 
-        {errorLog.errorLog ? (
+        {errorLogState ? (
           <Fragment>
             <h2>⚠️에러 로그⚠️</h2>
-            <p className="error-log">{errorLog.errorLog}</p>
+            <p className="error-log">{errorLogState.errorLog}</p>
           </Fragment>
         ) : (
           ""
