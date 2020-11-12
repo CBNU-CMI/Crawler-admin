@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Error from "../component/Error";
-import errorData from "../dummy/errorNotice";
-import errorLog from "../dummy/noticeErrorLog";
+
+const axios = require("axios");
 
 const Notice = () => {
+  const [errorNoticeState, setErrorNoticeState] = useState([]);
+
+  useEffect(() => {
+    axios.get(`http://172.30.7.171:3000/error/notice/list`).then((res) => {
+      const errorData = res.data;
+      setErrorNoticeState(errorData);
+    });
+  }, []);
+
   return (
     <div className="notice">
-      <Error errorData={errorData} errorLog={errorLog} />
+      <Error errorData={errorNoticeState} />
     </div>
   );
 };

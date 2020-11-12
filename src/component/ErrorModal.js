@@ -2,8 +2,9 @@ import React, { Fragment, useState, useEffect } from "react";
 import {} from "../styles/errorModal.scss";
 const axios = require("axios");
 
-const ErrorModal = ({ type, errorData, close }) => {
+const ErrorModal = ({ type, typeIdState, close }) => {
   const [errorLogState, setErrorLogState] = useState();
+  const [noticeDataState, setNoticeDataState] = useState();
 
   useEffect(() => {
     axios
@@ -12,18 +13,27 @@ const ErrorModal = ({ type, errorData, close }) => {
         const errorLog = res.data;
         setErrorLogState(errorLog);
       });
+    axios
+      .get(`http://172.30.7.171:3000/error/notice?site_id=${typeIdState}`)
+      .then((res) => {
+        const notice = res.data;
+        setNoticeDataState(notice);
+      });
   }, []);
-  
+
   return (
     <Fragment>
       <div className="modal-overlay" onClick={close} />
       <div className="error-modal">
-        {errorData.title ? (
+        {noticeDataState ? (
           <Fragment>
             <h2>최근 게시글</h2>
-            <p className="title">{errorData.title}</p>
-            <p className="date">{errorData.date}</p>
-            <p className="content">{errorData.content}</p>
+            <p className="title">{noticeDataState.title}</p>
+            <p className="date">{noticeDataState.date}</p>
+            <div
+              className="content"
+              dangerouslySetInnerHTML={{ __html: noticeDataState.content }}
+            ></div>
           </Fragment>
         ) : (
           ""
