@@ -13,7 +13,7 @@ const Error = ({ errorData }) => {
     setTypeState({ type });
     setTypeIdState({ id });
   }
-  console.log(typeState);
+
   function closeModal() {
     setModalState({ open: false });
   }
