@@ -21,6 +21,8 @@ const Error = ({ errorData }) => {
     <Fragment>
       <div className="error">
         <p>에러났어요 🥺</p>
+      </div>
+      <div className="error-list">
         {errorData.map((error) => {
           return (
             <div
@@ -30,8 +32,8 @@ const Error = ({ errorData }) => {
             >
               {error.type2 ? (
                 <p>
-                  {error.type + " - "}
-                  {error.type2}
+                  {error.type + " "}
+                  {" " + error.type2}
                   <MdKeyboardArrowRight />
                 </p>
               ) : (
@@ -47,7 +49,7 @@ const Error = ({ errorData }) => {
       {modalState.open ? (
         <ErrorModal
           type={typeState.type}
-          typeIdState={typeIdState.id}
+          typeId={typeIdState.id}
           close={closeModal}
         />
       ) : (
