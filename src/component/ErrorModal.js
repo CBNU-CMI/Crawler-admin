@@ -39,7 +39,7 @@ const ErrorModal = ({ type, typeId, close }) => {
         )}
         {noticeDataState ? (
           <Fragment>
-            <h2>최근 게시글</h2>
+            <h2 style={{ marginTop: "3rem" }}>최근 게시글</h2>
             <p className="title">{noticeDataState.title}</p>
             <p className="date">{noticeDataState.date}</p>
             <div
