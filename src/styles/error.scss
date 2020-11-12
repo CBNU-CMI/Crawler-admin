@@ -3,9 +3,16 @@
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.error-list {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   .error-crawler {
     font-size: 1.3rem;
     border: 1px solid #f0f2f3;
@@ -14,6 +21,7 @@
     padding-right: 2rem;
     margin: 1rem;
     cursor: pointer;
+    font-weight: normal;
   }
   .error-crawler:hover {
     background-color: #f0f2f3;
