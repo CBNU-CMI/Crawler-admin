@@ -8,9 +8,9 @@ const Home = () => {
   const [searchState, setSearchState] = useState({ search: false });
   const [termState, setTermState] = useState({ term: "" });
 
-  function mousePress() {
+  function mousePress(crawler) {
     setSearchState({ search: true });
-    setTermState({ term: "경영정보학과" });
+    setTermState({ term: crawler });
   }
 
   return (
@@ -18,7 +18,11 @@ const Home = () => {
       <div className="crawler-list">
         {data.crawlerList.map((crawler, index) => {
           return (
-            <div className="crawler" onClick={mousePress} key={index}>
+            <div
+              className="crawler"
+              onClick={() => mousePress(crawler)}
+              key={index}
+            >
               <p>
                 {crawler}
                 <MdKeyboardArrowRight style={{ color: "gray" }} />
