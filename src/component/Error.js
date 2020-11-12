@@ -3,7 +3,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import ErrorModal from "./ErrorModal";
 import {} from "../styles/error.scss";
 
-const Error = () => {
+const Error = ({ errorData, errorLog }) => {
   const [modalState, setModalState] = useState({ open: false });
   function openModal() {
     setModalState({ open: true });
@@ -17,12 +17,20 @@ const Error = () => {
         <p>에러났어요 🥺</p>
         <div className="error-crawler" onClick={openModal}>
           <p>
-            양진재
+            {errorData.type}
             <MdKeyboardArrowRight />
           </p>
         </div>
       </div>
-      {modalState.open ? <ErrorModal data="양진재" close={closeModal} /> : ""}
+      {modalState.open ? (
+        <ErrorModal
+          errorData={errorData}
+          errorLog={errorLog}
+          close={closeModal}
+        />
+      ) : (
+        ""
+      )}
     </Fragment>
   );
 };
