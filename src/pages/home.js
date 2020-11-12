@@ -2,32 +2,41 @@ import React, { useState } from "react";
 import {} from "../styles/home.scss";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Redirect } from "react-router";
+import data from "../dummy/home";
 
 const Home = () => {
   const [searchState, setSearchState] = useState({ search: false });
   const [termState, setTermState] = useState({ term: "" });
 
-  function mousePress() {
+  function mousePress(crawler) {
     setSearchState({ search: true });
-    setTermState({ term: "경영정보학과" });
+    setTermState({ term: crawler });
   }
 
   return (
     <div className="home">
       <div className="crawler-list">
-        <div className="crawler" onClick={mousePress}>
-          <p>
-            경영정보학과
-            <MdKeyboardArrowRight style={{ color: "gray" }} />
-          </p>
-          {searchState.search ? (
-            <Redirect
-              to={{ pathname: "/result", state: { term: termState.term } }}
-            />
-          ) : (
-            ""
-          )}
-        </div>
+        {data.crawlerList.map((crawler, index) => {
+          return (
+            <div
+              className="crawler"
+              onClick={() => mousePress(crawler)}
+              key={index}
+            >
+              <p>
+                {crawler}
+                <MdKeyboardArrowRight style={{ color: "gray" }} />
+              </p>
+              {searchState.search ? (
+                <Redirect
+                  to={{ pathname: "/result", state: { term: termState.term } }}
+                />
+              ) : (
+                ""
+              )}
+            </div>
+          );
+        })}
       </div>
       <div className="opensource">
         <h3>개발자이신가요?</h3>
