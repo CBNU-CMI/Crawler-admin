@@ -29,13 +29,16 @@ npm run start
 
 ### 🔌 Components
 
-**`Layout`**
+**`Navigation`**
 
+Navigation that allows you to move between pages.
 
-**`Dialog`**
+**`Search`**
+
+Components for searching crawlers.
 
 **`Modal`**
-
+Components for checking crawler errors and recent postings.
 
 
 ### String Utils
