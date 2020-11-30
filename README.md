@@ -9,43 +9,6 @@
 
 <p align="center">A admin webpage for cbnu-alrimi service.</p>
 
-## Development
-
-### Using Dev API Locally
-
-You must clone and run [`Alrimi Server`](https://github.com/CBNU-CMI/cbnu-alrimi-server) on your local machine in dev mode.
-
-```zsh
-npm run dev
-```
-
-### Using Production API
-
-Also you can develop only the client application without cloning server repository [`Alrimi Server`](https://github.com/CBNU-CMI/cbnu-alrimi-server).
-
-```zsh
-npm run start
-```
-
-### 🔌 Components
-
-**`Navigation`**
-
-Navigation that allows you to move between pages.
-
-**`Search`**
-
-Components for searching crawlers.
-
-**`Modal`**
-Components for checking crawler errors and recent postings.
-
-
-### String Utils
-
-**`camelToKebab(str)`**
-
-Transform a `camelCase` string to `kebab-case`.
 
 ## [License](https://github.com/CBNU-CMI/cbnu-alrimi/blob/master/LICENSE)
 
